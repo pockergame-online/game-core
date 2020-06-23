@@ -2,35 +2,35 @@
 
 #define LOG_DEBUG false
 
-Card::Card(string new_symbol, int new_value) {
+_Card::_Card(string new_symbol, int new_value) {
     symbol = new_symbol;
     card_value = new_value;
 }
 
-string Card::get_symbol() {
+string _Card::get_symbol() {
     return symbol;
 }
 
-int Card::get_card_value() {
+int _Card::get_card_value() {
     return card_value;
 }
 
-Deck::Deck(vector<Card> new_cards) {
+_Deck::_Deck(vector<_Card> new_cards) {
     cards = new_cards;
 }
 
-vector<Card> Deck::get_cards() {
+vector<_Card> _Deck::get_cards() {
     return cards;
 }
 
-void Deck::set_cards(vector<Card> new_cards) {
+void _Deck::set_cards(vector<_Card> new_cards) {
     cards = new_cards;
 }
 
-Deck Deck::operator+(const Deck& add_deck) {
-    Deck temp_deck = Deck (add_deck.cards);
+_Deck _Deck::operator+(const _Deck& add_deck) {
+    _Deck temp_deck = _Deck (add_deck.cards);
 
-    vector<Card> cards = add_deck.cards;
+    vector<_Card> cards = add_deck.cards;
 
     if (LOG_DEBUG) {
         for (int i=0; i < temp_deck.get_cards().size(); i++) {
@@ -42,7 +42,7 @@ Deck Deck::operator+(const Deck& add_deck) {
         if (LOG_DEBUG) { 
             cout << this->get_cards()[i].get_card_value() << endl;
         }
-        Card card_temp = Card(this->get_cards()[i].get_symbol(), this->get_cards()[i].get_card_value());
+        _Card card_temp = _Card(this->get_cards()[i].get_symbol(), this->get_cards()[i].get_card_value());
         cards.push_back(card_temp);
     }
     

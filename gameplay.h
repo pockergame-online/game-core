@@ -9,26 +9,26 @@ using namespace std;
 
 // enum hand_type {};
 
-class Card {
+class _Card {
     private:
         string symbol;
         int card_value;
 
     public:
-        Card(string, int);
+        _Card(string, int);
         string get_symbol();
         int get_card_value();
 };
 
-class Deck {
+class _Deck {
     private:
-        vector<Card> cards;
+        vector<_Card> cards;
 
     public:
-        Deck(vector<Card>);
-        vector<Card> get_cards();
-        void set_cards(vector<Card>);
-        Deck operator+(const Deck&);    
+        _Deck(vector<_Card>);
+        vector<_Card> get_cards();
+        void set_cards(vector<_Card>);
+        _Deck operator+(const _Deck&);    
 };
 
 #endif //_GAMEPLAY_H
