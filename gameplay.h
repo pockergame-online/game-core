@@ -2,6 +2,9 @@
 #include <vector>
 #include <iostream>
 
+#ifndef GAMEPLAY_H
+#define GAMEPLAY_H
+
 using namespace std;
 
 // enum hand_type {};
@@ -27,3 +30,5 @@ class Deck {
         void set_cards(vector<Card>);
         Deck operator+(const Deck&);    
 };
+
+#endif //GAMEPLAY_H
