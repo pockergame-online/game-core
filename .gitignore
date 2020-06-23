@@ -1,0 +1,10 @@
+a.out
+libgamecore.dylib
+libmylib.dylib
+main
+main.cpp
+mylib.cpp
+mylib.h
+test_game
+.vscode/c_cpp_properties.json
+.vscode/settings.json
