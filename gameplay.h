@@ -2,8 +2,8 @@
 #include <vector>
 #include <iostream>
 
-#ifndef GAMEPLAY_H
-#define GAMEPLAY_H
+#ifndef _GAMEPLAY_H
+#define _GAMEPLAY_H
 
 using namespace std;
 
@@ -31,4 +31,4 @@ class Deck {
         Deck operator+(const Deck&);    
 };
 
-#endif //GAMEPLAY_H
+#endif //_GAMEPLAY_H
