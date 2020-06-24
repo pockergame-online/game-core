@@ -7,7 +7,7 @@ using namespace std;
 
 void print_deck(_Deck deck) {
     for(int i=0; i < deck.get_cards().size(); i++) {
-        cout << "Card symbol --> " << deck.get_cards()[i].get_symbol() << " Card value --> " << deck.get_cards()[i].get_card_value() << endl;
+        clog << "clog::Card symbol --> " << deck.get_cards()[i].get_symbol() << " Card value --> " << deck.get_cards()[i].get_card_value() << endl;
     }
 };
 
@@ -27,4 +27,6 @@ int main() {
     _Deck deck3 = deck1 + deck2;
 
     print_deck(deck3);
+
+    clog << "is Pair?" << (card5 == _Card("Heart", 13)) << endl; 
 }

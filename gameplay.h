@@ -18,6 +18,7 @@ class _Card {
         _Card(string, int);
         string get_symbol();
         int get_card_value();
+        bool operator == (const _Card&);
 };
 
 class _Deck {
@@ -28,7 +29,8 @@ class _Deck {
         _Deck(vector<_Card>);
         vector<_Card> get_cards();
         void set_cards(vector<_Card>);
-        _Deck operator+(const _Deck&);    
+        _Deck operator + (const _Deck&);   
+
 };
 
 #endif //_GAMEPLAY_H
