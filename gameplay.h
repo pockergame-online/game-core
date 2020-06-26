@@ -1,6 +1,7 @@
 #include <string>
 #include <vector>
 #include <iostream>
+#include <map>
 
 #ifndef _GAMEPLAY_H
 #define _GAMEPLAY_H
@@ -11,8 +12,8 @@ using namespace std;
 
 class _Card {
     private:
-        string symbol;
-        int card_value;
+        string _symbol;
+        int _card_value;
 
     public:
         _Card(string, int);
@@ -23,14 +24,14 @@ class _Card {
 
 class _Deck {
     private:
-        vector<_Card> cards;
+        vector<_Card> _cards;
 
     public:
         _Deck(vector<_Card>);
         vector<_Card> get_cards();
         void set_cards(vector<_Card>);
-        _Deck operator + (const _Deck&);   
-
+        _Deck operator + (const _Deck&);
+        map<int,int> get_deck_evaluation();
 };
 
 #endif //_GAMEPLAY_H
