@@ -62,16 +62,15 @@ _Deck _Deck::operator + (const _Deck& add_deck) {
 
 map<int,int> _Deck::get_deck_evaluation() {
     map<int, int> _deck_value;
-
     int _counter = 0;
+    
     for (int i=0; i < this->get_cards().size(); i++) {
         _Card _current_card = this->get_cards()[i];
         _counter = 1;
 
         for (int j=0; j < this->get_cards().size(); j++) {
             if ( i != j ) {
-                _Card _to_card_compare = this->get_cards()[j];
-                if (_current_card == _to_card_compare)
+                if (_current_card == this->get_cards()[j])
                     _counter++;
             }
         }
