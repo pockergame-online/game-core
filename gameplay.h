@@ -8,7 +8,7 @@
 
 using namespace std;
 
-// enum hand_type {};
+enum _Deck_Value {NONE, PAIR, DOUBLE_PAIR, THREE_OF_KIND, FULL_HOUSE, POKER, FLUSH, ROYAL_FLUSH};
 
 class _Card {
     private:
@@ -31,7 +31,20 @@ class _Deck {
         vector<_Card> get_cards();
         void set_cards(vector<_Card>);
         _Deck operator + (const _Deck&);
-        map<int,int> get_deck_evaluation();
+        map<int,int> get_evaluate_kind();
+        _Deck_Value get_value();
+
 };
+
+/**
+class _Player {
+    private:
+        _Deck _deck;
+        string _nick_name;
+
+    public:
+        _Player(string _new_player_nick_name, _Deck _new_player_deck);
+
+};*/
 
 #endif //_GAMEPLAY_H

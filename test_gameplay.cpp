@@ -27,21 +27,25 @@ int main() {
     //initialization cards to test
 
     _Card card1 = _Card("Spade", 10);
-    _Card card2 = _Card("Spade", 1);
-    _Card card3 = _Card("Clubs", 1);
-    _Card card4 = _Card("Hearts", 1);
-    _Card card5 = _Card("Hearts", 10);
+    _Card card2 = _Card("Spade", 11);
+    _Card card3 = _Card("Spade", 12);
+    _Card card4 = _Card("Spade", 12);
+    _Card card5 = _Card("Spade", 1);
 
     _Deck deck1 = _Deck({card1, card2});
     _Deck deck2 = _Deck({card3, card4, card5});
     
-    map<int, int> _value = (deck1 + deck2).get_deck_evaluation();
-    map<int, int>::iterator it = _value.begin();
+    clog << "Deck Value --> " << (deck1 + deck2).get_value() << endl;
 
-    while (it != _value.end()) {
-      clog << it->first << " :: " << it->second << endl;
-      it++;
-    }
+    //sort_deck((deck1 + deck2));
+
+    //map<int, int> _value = (deck1 + deck2).get_evaluate_kind();
+    //map<int, int>::iterator it = _value.begin();
+
+    //while (it != _value.end()) {
+    //  clog << it->first << " :: " << it->second << endl;
+    //  it++;
+    //}
     
 
     //_Deck deck3 = deck1 + deck2;
