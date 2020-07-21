@@ -1,6 +1,6 @@
 # Game Core
 
-[![Build Status](https://travis-ci.org/pockergame-online/game-core.svg?branch=master)](https://travis-ci.org//pockergame-online/game-core)
+[![Build Status](https://travis-ci.org/pockergame-online/game-core.svg?branch=master)](https://travis-ci.org/pockergame-online/game-core)
 
 Game Core is library built on C++ that has all the functionality related with the poker game, this library counts with:
 
